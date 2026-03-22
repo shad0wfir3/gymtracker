@@ -19,7 +19,7 @@ export function CTASection() {
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready to{" "}
-            <span className="text-gradient">Level Up</span>?
+            <span className="text-pink-500">Level Up</span>?
           </h2>
 
           <p className="text-lg md:text-xl text-muted mb-8 max-w-2xl mx-auto">

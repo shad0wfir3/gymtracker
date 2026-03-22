@@ -26,10 +26,10 @@ export function HeroSection() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
               Track Your{" "}
-              <span className="text-gradient">Gains</span>.
+              <span className="text-pink-500">Gains</span>.
               <br />
               Crush Your{" "}
-              <span className="text-gradient">Goals</span>.
+              <span className="text-pink-500">Goals</span>.
             </h1>
 
             <p className="text-lg md:text-xl text-muted max-w-xl mx-auto lg:mx-0 mb-8">

@@ -51,7 +51,7 @@ export default function PricingPage() {
             <span className="text-sm font-mono tracking-wider uppercase text-pink-500 mb-4 block">Pricing</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
               Simple, Transparent{" "}
-              <span className="text-gradient">Pricing</span>
+              <span className="text-pink-500">Pricing</span>
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
               Choose the plan that fits your training. Upgrade or downgrade anytime.

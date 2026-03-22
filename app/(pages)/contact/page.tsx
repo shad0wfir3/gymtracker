@@ -30,7 +30,7 @@ export default function ContactPage() {
               <span className="text-sm font-mono tracking-wider uppercase text-pink-500 mb-4 block">Contact</span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
                 Get In{" "}
-                <span className="text-gradient">Touch</span>
+                <span className="text-pink-500">Touch</span>
               </h1>
               <p className="text-lg text-muted mb-8">
                 Questions? Feedback? We&apos;d love to hear from you.

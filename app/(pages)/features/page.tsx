@@ -28,7 +28,7 @@ export default function FeaturesPage() {
             <span className="text-sm font-mono tracking-wider uppercase text-pink-500 mb-4 block">Features</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
               Everything You Need to{" "}
-              <span className="text-gradient">Level Up</span>
+              <span className="text-pink-500">Level Up</span>
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
               Powerful features designed by lifters, for lifters. No fluff, just gains.
