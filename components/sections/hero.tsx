@@ -84,7 +84,7 @@ export function HeroSection() {
                       { name: "Overhead Press", sets: "3x8", weight: "50kg", done: true },
                       { name: "Incline Dumbbell", sets: "3x10", weight: "28kg", done: false },
                       { name: "Tricep Pushdown", sets: "3x12", weight: "35kg", done: false },
-                    ].map((exercise, i) => (
+                    ].map((exercise) => (
                       <div
                         key={exercise.name}
                         className={`flex items-center justify-between p-3 rounded-xl border ${

@@ -106,7 +106,7 @@ export default function PricingPage() {
                   href={plan.href}
                   className={`block w-full py-3 px-4 rounded-xl font-semibold text-center transition-all duration-200 ${
                     plan.popular
-                      ? "text-white bg-gradient-to-r from-pink-500 to-pink-600 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)]"
+                      ? "text-white bg-pink-500 hover:bg-pink-600 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)]"
                       : "text-white border border-border hover:bg-surface-hover hover:border-pink-500/30"
                   }`}
                 >
@@ -119,9 +119,6 @@ export default function PricingPage() {
       </main>
 
       <Footer />
-    </div>
-  );
-}
     </div>
   );
 }
