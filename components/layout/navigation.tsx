@@ -40,7 +40,7 @@ export function Navigation() {
             ))}
             <Link
               href="#waitlist"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-600 shadow-[0_4px_14px_0_rgba(236,72,153,0.4)] transition-all duration-200 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)] hover:-translate-y-0.5"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-pink-500 shadow-[0_4px_14px_0_rgba(236,72,153,0.4)] transition-all duration-200 hover:bg-pink-600 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)] hover:-translate-y-0.5"
             >
               Join Waitlist
             </Link>

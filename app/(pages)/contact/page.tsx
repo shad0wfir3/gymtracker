@@ -113,7 +113,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-600 shadow-[0_4px_14px_0_rgba(236,72,153,0.4)] transition-all duration-200 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)] hover:-translate-y-0.5 disabled:opacity-70 flex items-center justify-center gap-2"
+                    className="w-full py-4 rounded-xl font-semibold text-white bg-pink-500 shadow-[0_4px_14px_0_rgba(236,72,153,0.4)] transition-all duration-200 hover:bg-pink-600 hover:shadow-[0_6px_20px_0_rgba(236,72,153,0.5)] hover:-translate-y-0.5 disabled:opacity-70 flex items-center justify-center gap-2"
                   >
                     {status === "loading" ? (
                       <><Loader2 className="h-5 w-5 animate-spin" /> Sending...</>

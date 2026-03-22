@@ -77,7 +77,7 @@ export default function PricingPage() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-600">
+                    <span className="px-4 py-1 rounded-full text-sm font-semibold text-white bg-pink-500">
                       Most Popular
                     </span>
                   </div>
@@ -119,6 +119,9 @@ export default function PricingPage() {
       </main>
 
       <Footer />
+    </div>
+  );
+}
     </div>
   );
 }

@@ -113,8 +113,8 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Glow Effect */}
-                <div className="absolute -inset-px rounded-3xl bg-gradient-to-r from-pink-500/20 to-green-500/20 blur-xl -z-10" />
+                {/* Glow Effect - Solid color blur only */}
+                <div className="absolute -inset-px rounded-3xl bg-pink-500/10 blur-xl -z-10" />
               </div>
             </div>
           </motion.div>
