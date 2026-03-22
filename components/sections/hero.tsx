@@ -1,125 +1,102 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { WaitlistForm } from "@/components/ui/waitlist-form";
+import { Play } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-glow-pink" />
-      <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-[128px]" />
-      <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[128px]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 mb-6">
-              <span className="text-sm font-mono tracking-wider uppercase text-pink-500">Coming Soon</span>
-            </div>
+            <span className="text-accent text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Xtreme Fitness
+            </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              Track Your{" "}
-              <span className="text-pink-500">Gains</span>.
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-[0.9] mb-6">
+              BE
               <br />
-              Crush Your{" "}
-              <span className="text-pink-500">Goals</span>.
+              STRONG
             </h1>
 
-            <p className="text-lg md:text-xl text-muted max-w-xl mx-auto lg:mx-0 mb-8">
-              The intelligent workout tracker designed for serious lifters. Log sets, track progress, and smash your PRs.
+            <p className="text-lg md:text-xl text-gray-300 max-w-lg mx-auto lg:mx-0 mb-8">
+              Best GYM & Fitness Center. Build Your Health. Track Your Gains.
             </p>
 
-            <div id="waitlist" className="max-w-md mx-auto lg:mx-0">
-              <WaitlistForm />
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <Link
+                href="#contact"
+                className="px-10 py-4 bg-accent font-bold text-white uppercase tracking-wider
+                         transition-all duration-300 hover:bg-accent-hover hover:-translate-y-1"
+              >
+                Join us now
+              </Link>
+              
+              <button className="flex items-center gap-3 text-white group">
+                <div className="h-14 w-14 rounded-full bg-accent flex items-center justify-center
+                              transition-all duration-300 group-hover:scale-110">
+                  <Play className="h-5 w-5 text-white ml-1" fill="white" />
+                </div>
+                <span className="font-semibold uppercase tracking-wider">Watch Video</span>
+              </button>
             </div>
-
-            <p className="mt-4 text-sm text-muted">
-              Join 2,000+ lifters on the waitlist. No spam, ever.
-            </p>
           </motion.div>
 
-          {/* Hero Visual */}
+          {/* Right Content - Circular Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative flex justify-center"
           >
-            <div className="relative perspective-[2000px]">
-              <div className="relative bg-surface rounded-3xl border border-border p-6 md:p-8 shadow-[0_4px_20px_-2px_rgba(236,72,153,0.15)] transform rotate-x-[5deg] rotate-y-[-12deg] hover:rotate-x-[2deg] hover:rotate-y-[-8deg] transition-transform duration-500">
-                {/* App Mockup */}
-                <div className="space-y-4">
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="font-bold text-white">Today&apos;s Workout</div>
-                    <div className="text-sm text-muted">Mon, Mar 22</div>
-                  </div>
-
-                  {/* Stats Cards */}
-                  <div className="grid grid-cols-3 gap-3">
-                    {[
-                      { label: "Volume", value: "12,450", unit: "kg" },
-                      { label: "Sets", value: "24", unit: "sets" },
-                      { label: "PRs", value: "3", unit: "new" },
-                    ].map((stat) => (
-                      <div key={stat.label} className="bg-background rounded-xl p-3 border border-border">
-                        <div className="text-xs text-muted mb-1">{stat.label}</div>
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-xs text-green-500">+{stat.unit}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Exercise List */}
-                  <div className="space-y-2">
-                    {[
-                      { name: "Bench Press", sets: "5x5", weight: "80kg", done: true },
-                      { name: "Overhead Press", sets: "3x8", weight: "50kg", done: true },
-                      { name: "Incline Dumbbell", sets: "3x10", weight: "28kg", done: false },
-                      { name: "Tricep Pushdown", sets: "3x12", weight: "35kg", done: false },
-                    ].map((exercise) => (
-                      <div
-                        key={exercise.name}
-                        className={`flex items-center justify-between p-3 rounded-xl border ${
-                          exercise.done
-                            ? "bg-green-500/10 border-green-500/20"
-                            : "bg-background border-border"
-                        }`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div
-                            className={`h-5 w-5 rounded-full flex items-center justify-center ${
-                              exercise.done ? "bg-green-500" : "border-2 border-border"
-                            }`}
-                          >
-                            {exercise.done && <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
-                          </div>
-                          <span className={exercise.done ? "text-white line-through opacity-60" : "text-white"}>
-                            {exercise.name}
-                          </span>
-                        </div>
-                        <div className="text-sm text-muted">
-                          {exercise.sets} @ {exercise.weight}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Glow Effect - Solid color blur only */}
-                <div className="absolute -inset-px rounded-3xl bg-pink-500/10 blur-xl -z-10" />
+            <div className="relative w-72 h-72 md:w-96 md:h-96">
+              {/* Decorative Ring */}
+              <div className="absolute inset-0 rounded-full border-[12px] border-accent" />
+              <div className="absolute -inset-4 rounded-full border-2 border-accent/30" />
+              
+              {/* Image */}
+              <div className="absolute inset-3 rounded-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c149a?q=80&w=1000&auto=format&fit=crop"
+                  alt="Strong athlete lifting weights"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-1.5 h-3 bg-accent rounded-full mt-2"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
