@@ -2,18 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Dumbbell } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/features", label: "Features" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
@@ -36,13 +38,15 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-white uppercase tracking-wider hover:text-accent transition-colors"
+                className={`text-sm font-semibold uppercase tracking-wider transition-colors ${
+                  pathname === link.href ? "text-accent" : "text-white hover:text-accent"
+                }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/contact"
               className="px-6 py-3 bg-accent font-semibold text-white uppercase tracking-wider text-sm
                        transition-all duration-300 hover:bg-accent-hover hover:-translate-y-0.5"
             >
@@ -74,13 +78,15 @@ export function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-2 py-2 text-base font-semibold uppercase tracking-wider text-white hover:text-accent transition-colors"
+                    className={`block px-2 py-2 text-base font-semibold uppercase tracking-wider transition-colors ${
+                      pathname === link.href ? "text-accent" : "text-white hover:text-accent"
+                    }`}
                   >
                     {link.label}
                   </Link>
                 ))}
                 <Link
-                  href="#contact"
+                  href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block mx-2 px-6 py-3 bg-accent text-center font-semibold text-white uppercase tracking-wider"
                 >
