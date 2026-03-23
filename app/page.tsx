@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero";
-import { FeaturesSection } from "@/components/sections/features-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -16,7 +15,6 @@ export default function Home() {
       
       <main>
         <HeroSection />
-        <FeaturesSection />
         <AboutSection />
         <ServicesSection />
         <TestimonialsSection />

@@ -7,9 +7,9 @@ import { Menu, X, Dumbbell } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/features", label: "Features" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navigation() {
